@@ -10,6 +10,7 @@ export default defineConfig({
         glasshouse: resolve(import.meta.dirname, "glasshouse.html"),
         electric: resolve(import.meta.dirname, "electric.html"),
         aeterna: resolve(import.meta.dirname, "aeterna.html"),
+        jinxi: resolve(import.meta.dirname, "jinxi.html"),
       },
     },
   },

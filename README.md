@@ -9,6 +9,7 @@ editorial typography, immersive visuals, and expressive RSVP experiences.
 - **Glasshouse** — botanical and luminous
 - **Electric Vow** — kinetic and unapologetic
 - **Aeterna** — restrained luxury editorial
+- **今夕** — contemporary Chinese typography, paper, ink, and red thread
 
 ## Development
 
