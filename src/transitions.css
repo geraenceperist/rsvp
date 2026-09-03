@@ -1,0 +1,34 @@
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: page-out 0.65s cubic-bezier(.76, 0, .24, 1) both;
+}
+
+::view-transition-new(root) {
+  animation: page-in 0.85s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+    transform: scale(.96);
+    filter: blur(12px);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(3vh) scale(1.02);
+    filter: blur(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}

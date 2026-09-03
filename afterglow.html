@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#61151d" />
+    <meta
+      name="description"
+      content="A cinematic wedding invitation and RSVP experience."
+    />
+    <title>Afterglow — Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Italiana&family=Manrope:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="shader-canvas" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+    <a class="back-to-gallery" href="/">← All templates</a>
+
+    <div class="loader" id="loader">
+      <div class="loader-mark">
+        <span data-bind="initialOne">M</span>
+        <i></i>
+        <span data-bind="initialTwo">L</span>
+      </div>
+      <p>Composing the moment</p>
+    </div>
+
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span data-bind="initialOne">M</span><i></i><span data-bind="initialTwo">L</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#story">Story</a>
+        <a href="#weekend">The weekend</a>
+        <a href="#place">The place</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" id="sound-toggle" aria-label="Toggle ambient sound">
+          <span class="sound-bars"><i></i><i></i><i></i></span>
+        </button>
+        <button class="edit-button" id="edit-open">
+          <span>Edit this page</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/>
+          </svg>
+        </button>
+        <button class="rsvp-pill" data-open-rsvp>RSVP</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit-dot"></div>
+        </div>
+        <p class="eyebrow reveal">A celebration of love · <span data-bind="location">Comporta, Portugal</span></p>
+        <div class="hero-title" aria-label="Wedding couple names">
+          <span class="name name-one" data-bind="partnerOne">Maya</span>
+          <span class="ampersand">&</span>
+          <span class="name name-two" data-bind="partnerTwo">Leo</span>
+        </div>
+        <div class="hero-bottom">
+          <div class="date-block reveal">
+            <span class="micro">SAVE THE DATE</span>
+            <strong data-bind="dateDisplay">18 · 09 · 2027</strong>
+          </div>
+          <button class="scroll-cue" data-scroll="#intro" aria-label="Scroll to invitation">
+            <span>Enter the story</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg>
+          </button>
+          <p class="hero-note reveal" data-bind="tagline">Two souls, one very good party.</p>
+        </div>
+      </section>
+
+      <section class="intro section-light" id="intro">
+        <div class="chapter-index reveal">01 — THE INVITATION</div>
+        <div class="intro-copy">
+          <p class="kicker reveal">TOGETHER WITH THEIR FAMILIES</p>
+          <h1 class="display reveal">
+            Come for the vows.<br />
+            Stay for the <em>afterglow.</em>
+          </h1>
+          <p class="body-copy reveal" data-bind="intro">
+            We found our forever in each other. Now we’re gathering our favorite
+            people at the edge of the Atlantic for three days of salt air,
+            candlelight, and dancing until dawn.
+          </p>
+          <button class="magnetic-button reveal" data-open-rsvp>
+            <span>Save my seat</span>
+            <i>↗</i>
+          </button>
+        </div>
+        <div class="countdown reveal" aria-label="Countdown to the wedding">
+          <div><strong data-count="days">000</strong><span>Days</span></div>
+          <div><strong data-count="hours">00</strong><span>Hours</span></div>
+          <div><strong data-count="minutes">00</strong><span>Minutes</span></div>
+          <div><strong data-count="seconds">00</strong><span>Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="story section-dark" id="story">
+        <div class="story-image-wrap reveal">
+          <img src="/story.webp" alt="A couple walking toward the Atlantic at sunset" />
+          <div class="image-stamp">
+            <span>US, ALWAYS</span>
+            <small>COMPORTA / 2026</small>
+          </div>
+        </div>
+        <div class="story-copy">
+          <div class="chapter-index reveal">02 — HOW WE GOT HERE</div>
+          <p class="pull-quote reveal">
+            “One conversation<br />that never really <em>ended.</em>”
+          </p>
+          <div class="story-columns reveal">
+            <p>
+              A missed train. A borrowed phone charger. Coffee that turned into
+              dinner, then a walk through a city neither of us knew very well.
+            </p>
+            <p>
+              Seven years, four apartments, and one windswept proposal later,
+              we’re still choosing the long way home—so long as it’s together.
+            </p>
+          </div>
+          <div class="signature reveal" data-bind="signature">M + L</div>
+        </div>
+      </section>
+
+      <section class="weekend section-coral" id="weekend">
+        <div class="chapter-index reveal">03 — THE WEEKEND</div>
+        <div class="section-heading">
+          <p class="kicker reveal">THREE DAYS / ONE UNFORGETTABLE WEEKEND</p>
+          <h2 class="display reveal">Meet us where<br />the <em>sun meets sea.</em></h2>
+        </div>
+        <div class="schedule">
+          <article class="schedule-card reveal">
+            <div class="card-number">01</div>
+            <div class="card-day">
+              <span>FRI</span>
+              <strong>17</strong>
+              <small>SEPT</small>
+            </div>
+            <div class="card-content">
+              <p class="micro">18:00 · BAREFOOT ENCOURAGED</p>
+              <h3>Sunset<br />welcome</h3>
+              <p>Oysters, vinho verde and a first toast on the sand.</p>
+            </div>
+            <div class="card-icon">☼</div>
+          </article>
+          <article class="schedule-card feature reveal">
+            <div class="card-number">02</div>
+            <div class="card-day">
+              <span>SAT</span>
+              <strong>18</strong>
+              <small>SEPT</small>
+            </div>
+            <div class="card-content">
+              <p class="micro">16:30 · THE MAIN EVENT</p>
+              <h3>Vows &<br />velvet night</h3>
+              <p>Ceremony in the pines, dinner under stars, dancing everywhere.</p>
+            </div>
+            <div class="card-icon">✦</div>
+          </article>
+          <article class="schedule-card reveal">
+            <div class="card-number">03</div>
+            <div class="card-day">
+              <span>SUN</span>
+              <strong>19</strong>
+              <small>SEPT</small>
+            </div>
+            <div class="card-content">
+              <p class="micro">11:00 · COME AS YOU ARE</p>
+              <h3>Slow<br />goodbye</h3>
+              <p>Strong coffee, long lunch, and one last swim.</p>
+            </div>
+            <div class="card-icon">≈</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="place section-dark" id="place">
+        <div class="venue-image reveal">
+          <img src="/venue.webp" alt="A candlelit coastal venue at sunset" />
+          <div class="venue-marker">
+            <span>38.3804° N</span>
+            <i></i>
+            <span>8.7860° W</span>
+          </div>
+        </div>
+        <div class="venue-copy">
+          <div class="chapter-index reveal">04 — THE PLACE</div>
+          <p class="kicker reveal">CASA ATLÂNTICA · COMPORTA</p>
+          <h2 class="display reveal">Wild coast.<br /><em>Soft light.</em></h2>
+          <p class="body-copy reveal">
+            Between umbrella pines and endless dunes, Casa Atlântica is our
+            secret place by the sea—rough around the edges, warm at heart.
+          </p>
+          <a class="text-link reveal" href="https://maps.google.com" target="_blank" rel="noreferrer">
+            <span>Open in maps</span><i>↗</i>
+          </a>
+        </div>
+      </section>
+
+      <section class="details section-light">
+        <div class="chapter-index reveal">05 — GOOD TO KNOW</div>
+        <div class="details-heading">
+          <h2 class="display reveal">The little things.</h2>
+          <p class="body-copy reveal">Everything you need to arrive relaxed and ready to celebrate.</p>
+        </div>
+        <div class="accordion">
+          <details class="reveal" open>
+            <summary><span>01</span><strong>What should I wear?</strong><i>+</i></summary>
+            <p>Coastal formal. Think sculptural silhouettes, joyful color, and shoes that can handle sand.</p>
+          </details>
+          <details class="reveal">
+            <summary><span>02</span><strong>How do I get there?</strong><i>+</i></summary>
+            <p>Fly into Lisbon. We’ll run shuttles from our recommended hotels in Comporta.</p>
+          </details>
+          <details class="reveal">
+            <summary><span>03</span><strong>Can I bring someone?</strong><i>+</i></summary>
+            <p>Your invitation will say if a plus-one has been reserved. Children are welcome at brunch.</p>
+          </details>
+          <details class="reveal">
+            <summary><span>04</span><strong>Where should I stay?</strong><i>+</i></summary>
+            <p>We have room blocks at AlmaLusa and Quinta da Comporta. Booking details follow after RSVP.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="finale">
+        <div class="finale-ring" aria-hidden="true"></div>
+        <p class="kicker reveal">KINDLY REPLY BY 01 JUNE 2027</p>
+        <h2 class="reveal">Are you in?</h2>
+        <button class="final-rsvp reveal" data-open-rsvp>
+          <span>Joyfully accept</span>
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path id="circle-path" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" fill="none"/>
+            <text><textPath href="#circle-path">RSVP · RSVP · RSVP · RSVP · </textPath></text>
+          </svg>
+        </button>
+        <p class="final-names"><span data-bind="partnerOne">Maya</span> & <span data-bind="partnerTwo">Leo</span></p>
+        <footer>
+          <span data-bind="dateDisplay">18 · 09 · 2027</span>
+          <span>Made with Afterglow</span>
+          <span data-bind="location">Comporta, Portugal</span>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="rsvp-modal" id="rsvp-modal">
+      <button class="modal-close" id="rsvp-close" aria-label="Close RSVP form">×</button>
+      <div class="modal-intro">
+        <p class="kicker">YOUR PRESENCE IS THE PRESENT</p>
+        <h2>Will we see<br />you there?</h2>
+        <p>Reply by 01 June 2027</p>
+      </div>
+      <form id="rsvp-form">
+        <label>
+          <span>Your name</span>
+          <input required name="name" placeholder="Full name" autocomplete="name" />
+        </label>
+        <fieldset>
+          <legend>Can you make it?</legend>
+          <label class="radio-card">
+            <input type="radio" name="attendance" value="yes" required />
+            <span><i>✦</i> Joyfully accepts</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="attendance" value="no" />
+            <span><i>—</i> Regretfully declines</span>
+          </label>
+        </fieldset>
+        <label>
+          <span>Dietary notes</span>
+          <input name="diet" placeholder="Allergies or preferences" />
+        </label>
+        <label>
+          <span>A song for the dance floor</span>
+          <input name="song" placeholder="Artist — Track" />
+        </label>
+        <button type="submit">Send my reply <i>↗</i></button>
+      </form>
+      <div class="form-success" id="form-success">
+        <span>✦</span>
+        <h3>It’s official.</h3>
+        <p>Your reply is in. We can’t wait to celebrate with you.</p>
+      </div>
+    </dialog>
+
+    <aside class="editor" id="editor" aria-label="Page editor">
+      <div class="editor-header">
+        <div>
+          <span class="micro">AFTERGLOW STUDIO</span>
+          <h2>Make it yours.</h2>
+        </div>
+        <button id="edit-close" aria-label="Close editor">×</button>
+      </div>
+      <div class="editor-body">
+        <div class="editor-section">
+          <p class="editor-label">THE COUPLE</p>
+          <div class="input-pair">
+            <label><span>Partner one</span><input data-edit="partnerOne" /></label>
+            <label><span>Partner two</span><input data-edit="partnerTwo" /></label>
+          </div>
+        </div>
+        <div class="editor-section">
+          <p class="editor-label">THE MOMENT</p>
+          <label><span>Date</span><input data-edit="date" type="date" /></label>
+          <label><span>Location</span><input data-edit="location" /></label>
+          <label><span>Short line</span><input data-edit="tagline" /></label>
+        </div>
+        <div class="editor-section">
+          <p class="editor-label">PALETTE</p>
+          <div class="palette-options">
+            <button data-palette="wine" class="active" aria-label="Wine palette"><i></i><i></i><i></i></button>
+            <button data-palette="ocean" aria-label="Ocean palette"><i></i><i></i><i></i></button>
+            <button data-palette="olive" aria-label="Olive palette"><i></i><i></i><i></i></button>
+            <button data-palette="midnight" aria-label="Midnight palette"><i></i><i></i><i></i></button>
+          </div>
+        </div>
+        <div class="editor-section">
+          <p class="editor-label">INTRODUCTION</p>
+          <label><span>Invitation copy</span><textarea data-edit="intro" rows="6"></textarea></label>
+        </div>
+      </div>
+      <div class="editor-footer">
+        <button class="reset-button" id="reset-page">Reset</button>
+        <button class="publish-button" id="save-page">Save changes <span>↗</span></button>
+      </div>
+    </aside>
+    <div class="editor-scrim" id="editor-scrim"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
