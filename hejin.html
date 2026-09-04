@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d9d0bd" />
+    <meta name="description" content="合卺——沈砚与苏棠的中式婚礼邀请。" />
+    <title>合卺｜沈砚与苏棠</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <svg class="filter-bank" aria-hidden="true">
+      <defs>
+        <filter id="hejin-squiggle" x="-12%" y="-12%" width="124%" height="124%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012 0.025" numOctaves="2" seed="7" result="noise">
+            <animate
+              attributeName="baseFrequency"
+              dur="8s"
+              values="0.012 0.025;0.018 0.018;0.01 0.03;0.012 0.025"
+              repeatCount="indefinite"
+            />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+        </filter>
+        <filter id="hejin-wind" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.006 0.01" numOctaves="2" seed="12" result="wind">
+            <animate
+              attributeName="baseFrequency"
+              dur="14s"
+              values="0.006 0.01;0.012 0.007;0.008 0.014;0.006 0.01"
+              repeatCount="indefinite"
+            />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="wind" scale="22">
+            <animate attributeName="scale" dur="11s" values="17;28;20;17" repeatCount="indefinite" />
+          </feDisplacementMap>
+        </filter>
+        <filter id="hejin-paper">
+          <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="4" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+          <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 .16" />
+          </feComponentTransfer>
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="hejin-intro" id="hejin-intro" aria-hidden="true">
+      <div class="intro-door intro-door-left"><i></i><span>谨</span></div>
+      <div class="intro-door intro-door-right"><i></i><span>启</span></div>
+      <div class="intro-knot"><b>囍</b><small>乙巳年 · 仲秋</small></div>
+    </div>
+
+    <svg class="paper-noise" aria-hidden="true">
+      <rect width="100%" height="100%" filter="url(#hejin-paper)" />
+    </svg>
+
+    <div class="tree-shadow" aria-hidden="true">
+      <svg viewBox="0 0 900 1100" preserveAspectRatio="xMidYMid slice">
+        <g filter="url(#hejin-wind)">
+          <path d="M930 90C720 210 735 470 518 575 360 651 293 805 217 1110" />
+          <path d="M702 350C576 315 478 226 385 105M569 545C421 496 307 391 216 251M422 696C322 681 205 586 83 421" />
+          <g class="leaves">
+            <ellipse cx="410" cy="112" rx="58" ry="22" transform="rotate(25 410 112)" />
+            <ellipse cx="485" cy="192" rx="62" ry="24" transform="rotate(-8 485 192)" />
+            <ellipse cx="303" cy="218" rx="68" ry="25" transform="rotate(37 303 218)" />
+            <ellipse cx="637" cy="308" rx="72" ry="27" transform="rotate(18 637 308)" />
+            <ellipse cx="525" cy="332" rx="59" ry="21" transform="rotate(-28 525 332)" />
+            <ellipse cx="226" cy="335" rx="69" ry="25" transform="rotate(14 226 335)" />
+            <ellipse cx="351" cy="441" rx="75" ry="28" transform="rotate(34 351 441)" />
+            <ellipse cx="475" cy="495" rx="61" ry="23" transform="rotate(-20 475 495)" />
+            <ellipse cx="138" cy="470" rx="65" ry="24" transform="rotate(-16 138 470)" />
+            <ellipse cx="261" cy="577" rx="73" ry="27" transform="rotate(21 261 577)" />
+            <ellipse cx="165" cy="674" rx="66" ry="25" transform="rotate(39 165 674)" />
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <a class="hejin-back" href="/"><span>选集</span><i>↖</i></a>
+    <header class="hejin-nav">
+      <a href="#top" class="hejin-mark">合卺</a>
+      <p>沈砚 <i>×</i> 苏棠</p>
+      <button data-hejin-rsvp>回帖</button>
+    </header>
+
+    <main id="top">
+      <section class="hejin-hero">
+        <div class="hero-frame" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <p class="hero-prelude">一纸婚书 · 两姓之好 · 敬呈台启</p>
+        <div class="hero-title" aria-label="合卺">
+          <span>合</span>
+          <span>卺</span>
+        </div>
+        <div class="hero-names">
+          <p><small>新郎</small><strong>沈砚</strong></p>
+          <i>与</i>
+          <p><small>新娘</small><strong>苏棠</strong></p>
+        </div>
+        <div class="hero-date">
+          <span>农历乙巳年</span>
+          <strong>九月初七</strong>
+          <span>公历 2027.10.06</span>
+        </div>
+        <div class="hero-address">
+          <span>苏州 · 留园</span>
+          <small>上午十一时 · 恭候光临</small>
+        </div>
+        <svg class="hero-brush" viewBox="0 0 900 240" aria-hidden="true">
+          <path id="hejin-brush-path" d="M20 171C142 72 238 207 362 123 477 45 596 155 708 86 776 44 834 52 882 29" />
+        </svg>
+        <a class="hero-scroll" href="#letter"><span>展帖</span><i></i></a>
+      </section>
+
+      <section class="hejin-letter" id="letter">
+        <div class="letter-number">壹</div>
+        <div class="letter-copy reveal-hejin">
+          <span>奉 呈 台 启</span>
+          <h1>三书六礼，<br />明媒正娶。</h1>
+          <p>
+            山河远阔，人间烟火。我们想循着古老的礼序，
+            在亲友见证之下，认真地走向彼此。
+          </p>
+          <p>
+            谨定于乙巳年九月初七，于苏州留园行合卺之礼。
+            一席薄酒，敬候君至。
+          </p>
+          <div class="letter-sign">
+            <small>谨邀</small>
+            <strong>沈砚 · 苏棠</strong>
+          </div>
+        </div>
+        <svg class="handwritten-vow reveal-hejin" viewBox="0 0 760 360" aria-label="愿岁并谢，与长友兮">
+          <path id="vow-curve" d="M47 236C151 105 272 305 405 168 504 66 622 153 718 68" />
+          <text>
+            <textPath href="#vow-curve" startOffset="7%">愿岁并谢　与长友兮</textPath>
+          </text>
+          <path class="vow-underline" d="M77 283C224 244 406 294 672 209" />
+        </svg>
+        <div class="letter-seal reveal-hejin"><span>永</span><span>以</span><span>为</span><span>好</span></div>
+      </section>
+
+      <section class="hejin-rites">
+        <div class="rites-heading reveal-hejin">
+          <span>贰 · 成礼</span>
+          <h2>旧礼新行，<br /><em>郑重欢喜。</em></h2>
+        </div>
+        <div class="rites-list">
+          <article class="reveal-hejin">
+            <span>一</span>
+            <div><small>11:18</small><h3>却扇</h3><p>扇掩新人面，待郎作诗催。</p></div>
+            <i>却</i>
+          </article>
+          <article class="reveal-hejin">
+            <span>二</span>
+            <div><small>11:28</small><h3>沃盥</h3><p>净手净心，以示礼敬。</p></div>
+            <i>盥</i>
+          </article>
+          <article class="reveal-hejin">
+            <span>三</span>
+            <div><small>11:38</small><h3>合卺</h3><p>同牢而食，合卺而酳。</p></div>
+            <i>卺</i>
+          </article>
+          <article class="reveal-hejin">
+            <span>四</span>
+            <div><small>11:48</small><h3>结发</h3><p>青丝相系，此生相守。</p></div>
+            <i>发</i>
+          </article>
+        </div>
+      </section>
+
+      <section class="hejin-place">
+        <div class="place-panel reveal-hejin">
+          <span>叁 · 宴客</span>
+          <h2>一园秋色，<br />半日清欢。</h2>
+          <p>
+            留园的冠云峰下，桂香正盛。请着雅致中式或自然色衣裳，
+            与我们一同吃茶、观礼、入席。
+          </p>
+          <dl>
+            <div><dt>吉址</dt><dd>苏州市姑苏区<br />留园路三三八号</dd></div>
+            <div><dt>入园</dt><dd>十时三十分<br />东门迎宾处</dd></div>
+            <div><dt>宴席</dt><dd>十二时十八分<br />冠云楼</dd></div>
+          </dl>
+          <a href="https://maps.google.com" target="_blank" rel="noreferrer">循迹而来 <i>↗</i></a>
+        </div>
+        <div class="place-window" aria-hidden="true">
+          <div class="moon-gate">
+            <span class="garden-stone"></span>
+            <i class="bamboo bamboo-one"></i>
+            <i class="bamboo bamboo-two"></i>
+            <i class="bamboo bamboo-three"></i>
+          </div>
+          <p>留 园 · 桂 香 正 盛</p>
+        </div>
+      </section>
+
+      <section class="hejin-rsvp">
+        <div class="rsvp-character" aria-hidden="true">囍</div>
+        <p class="rsvp-kicker">肆 · 敬候佳音</p>
+        <h2>纸短情长，<br />盼君<em>亲启。</em></h2>
+        <p>请于二〇二七年八月初七前赐复</p>
+        <button data-hejin-rsvp><span>回帖赴宴</span><i>启</i></button>
+        <footer>
+          <span>沈府 · 苏府 敬邀</span>
+          <span>乙巳年九月初七</span>
+          <a href="#top">回到卷首 ↑</a>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="hejin-modal" id="hejin-modal">
+      <button class="hejin-close" aria-label="关闭回帖">合上 ×</button>
+      <div class="modal-heading">
+        <span>敬候回音</span>
+        <h2>君来，<br />满座生辉。</h2>
+      </div>
+      <form>
+        <label><span>尊姓大名</span><input required placeholder="请题名" /></label>
+        <fieldset>
+          <legend>可否赴宴</legend>
+          <label><input type="radio" name="hejin-attending" required /><span>欣然赴约</span></label>
+          <label><input type="radio" name="hejin-attending" /><span>遥祝新禧</span></label>
+        </fieldset>
+        <label><span>同来宾客</span><select><option>一位</option><option>两位</option><option>三位</option></select></label>
+        <label><span>留笺</span><textarea rows="3" placeholder="写下一句祝福……"></textarea></label>
+        <button type="submit">呈上回帖 <i>↗</i></button>
+      </form>
+      <div class="hejin-success">
+        <strong>帖已收到。</strong>
+        <p>扫径以待，静候君来。</p>
+        <span>沈砚 · 苏棠</span>
+      </div>
+    </dialog>
+
+    <script type="module" src="/src/hejin.js"></script>
+  </body>
+</html>
